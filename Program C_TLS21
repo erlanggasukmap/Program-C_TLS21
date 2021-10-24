@@ -1,0 +1,48 @@
+//Program Operasi Aritmatika Sederhana (penjumlahan,pengurangan,perkalian,pembagian)
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	int bil1, bil2, pil_operasi;
+	float hasil;
+	string operasi; 
+
+	cout << "--Selamat Datang--\n\n";
+	cout << "Silahkan pilih Operasi Aritmatika \n";
+	cout << "1. Penjumlahan\n";
+	cout << "2. Pengurangan\n";
+	cout << "3. Perkalian\n";
+	cout << "4. Pembagian\n\n";
+
+	cout << "Pilih Operasi(nomor) : ";
+	cin >> pil_operasi;
+	cout << "Bilangan pertama : ";
+	cin >> bil1;
+	cout << "Bilangan kedua : ";
+	cin >> bil2;
+
+	switch (pil_operasi)
+	{
+	case 1: hasil = bil1 + bil2;
+		operasi = '+';
+		break;
+	case 2: hasil = bil1 - bil2;
+		operasi = '-';
+		break;
+	case 3: hasil = bil1 * bil2;
+		operasi = '*';
+		break;
+	case 4: hasil = bil1 / bil2;
+		operasi = '/';
+		break;
+	}
+
+	cout << "---------------------\n";
+	cout << "Hasil : \n";
+	cout << bil1 << operasi << bil2 << " = " << hasil << endl;
+
+	return 0;
+}
